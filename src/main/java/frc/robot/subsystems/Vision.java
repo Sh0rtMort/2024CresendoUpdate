@@ -76,7 +76,7 @@ public class Vision extends SubsystemBase{
 
     public double getYaw() {
         var result = limelight.getLatestResult();
-        boolean hasTarget = limelight.getLatestResult().hasTargets();
+        // boolean hasTarget = limelight.getLatestResult().hasTargets();
 
         if (result.hasTargets()) {
             return result.getBestTarget().getYaw();

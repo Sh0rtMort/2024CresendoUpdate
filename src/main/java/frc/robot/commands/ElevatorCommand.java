@@ -31,13 +31,13 @@ public class ElevatorCommand extends Command {
 
     @Override
     public void execute() {
-        double speed = elevator1Pid.calculate(setpoint);
+        double speed = elevator1Pid.calculate(elevatorSubsystem.getEncoderMeters());
 
-        // elevatorSubsystem.setElevatorSpeed(speed);
+        elevatorSubsystem.setElevatorSpeed(speed);
     }
 
     @Override
     public void end(boolean interrupted) {
-        // elevatorSubsystem.setElevatorSpeed(0);
+        elevatorSubsystem.setElevatorSpeed(0);
     }
 }

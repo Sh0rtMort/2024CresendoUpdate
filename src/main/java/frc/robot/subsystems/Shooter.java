@@ -6,6 +6,7 @@ import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.MotorCommutation;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.TalonFX;
+import com.ctre.phoenix6.configs.TalonFXConfiguration;
 import com.revrobotics.CANSparkMax;
 // import com.revrobotics.CANSparkMax.IdleMode;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
@@ -25,6 +26,8 @@ public class Shooter extends SubsystemBase{
     private TalonFX shootWheel2 = new TalonFX(DeviceConstants.indexWheel);
 
     private TalonFX storageIndexMotor = new TalonFX(5);
+
+    private TalonFX pivotMotor = new TalonFX(0);
     
     private Vision vision = new Vision();
 
